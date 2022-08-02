@@ -42,10 +42,6 @@ function App() {
       return;
     }
 
-    console.log("tasks", tasks);
-
-    console.log("New task data", newTaskData);
-
     const response = await fetch(FIREBASE_TASK_URL, {
       method: "PATCH",
       headers: {
@@ -58,16 +54,19 @@ function App() {
       })
     });
 
-    console.log("Response", response);
-
     if (!response.ok) {
       throw new Error("Something went terribly wrong!");
     }
 
-    const json = await response.json();
-    console.log(json);
-
     setIsEditing(false);
+    setTasks(prevTasks => {
+      return prevTasks.map(prevTask => {
+        if (prevTask.id === idOfTaskBeingEdited) {
+          return {id: idOfTaskBeingEdited, text: newTaskData};
+        }
+        return prevTask;
+      });
+    });
   };
 
   const deleteTaskHandler = async (taskId) => {

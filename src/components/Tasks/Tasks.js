@@ -17,6 +17,7 @@ const Tasks = ({items, error, loading, onFetch, onEdit, onDelete}) => {
       <ul>
         {items.map((task) => (
           <TaskItem
+            id={task.id}
             key={task.id}
             text={task.text}
             onEdit={onEdit}

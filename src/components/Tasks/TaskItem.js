@@ -8,6 +8,7 @@ fontawesome.library.add(faEdit, faRemove);
 
 const TaskItem = ({text, onEdit, onDelete, id}) => {
   const editTaskHandler = () => {
+    console.log("TaskItem id", id);
     onEdit(id, text);
   };
 
