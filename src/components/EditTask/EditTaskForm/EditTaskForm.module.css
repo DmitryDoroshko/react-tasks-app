@@ -1,0 +1,58 @@
+.form {
+  width: 100%;
+}
+
+.form label {
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+
+.form input {
+  display: inline-block;
+  border-bottom: 3px solid #ccc;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  line-height: 2;
+  font-size: 1rem;
+  color: black;
+}
+
+.form input::placeholder {
+  line-height: 2;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form input:focus {
+  border-bottom: 3px solid #7a0144;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls input {
+  flex-basis: 70%;
+}
+
+.actions {
+  margin-left: auto;
+  margin-top: 1rem;
+}
+
+.btnCancel {
+  margin-right: 1rem;
+  color: white;
+  background-color: rgba(255, 69, 0, 0.8);
+  outline: none;
+  border: none;
+}
+
+.btnCancel:hover {
+  background-color: rgba(255, 69, 0, 1);
+}

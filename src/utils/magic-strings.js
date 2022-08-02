@@ -1,0 +1,2 @@
+export const FIREBASE_TASK_URL = "https://react-http-4c6bb-default-rtdb.europe-west1.firebasedatabase.app/tasks.json";
+export const FIREBASE_TASK_URL_MINIFIED = "https://react-http-4c6bb-default-rtdb.europe-west1.firebasedatabase.app/tasks";
